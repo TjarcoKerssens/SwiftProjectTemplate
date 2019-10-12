@@ -21,6 +21,13 @@ class MainCoordinator: Coordinator {
         let vc = MainController.instantiate()
         vc.coordinator = self
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        vc.tabBarItem.title = "First"
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showProduct(_ product: ProductViewModel){
+        let productVc = ProductDetailController.instantiate()
+        productVc.product = product
+        navigationController.pushViewController(productVc, animated: true)
     }
 }

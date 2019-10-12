@@ -21,6 +21,7 @@ class SecondaryCoordinator: Coordinator {
         let vc = SecondaryViewController.instantiate()
         vc.coordinator = self
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        vc.tabBarItem.title = "Second"
         navigationController.pushViewController(vc, animated: false)
     }
     

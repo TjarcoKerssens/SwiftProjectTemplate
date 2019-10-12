@@ -19,6 +19,12 @@
 		86D3FAFB234FB96A00E13433 /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3FAFA234FB96A00E13433 /* SecondaryViewController.swift */; };
 		86D3FAFD234FB9DF00E13433 /* SecondaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3FAFC234FB9DF00E13433 /* SecondaryCoordinator.swift */; };
 		86D3FB1F234FBD7F00E13433 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3FB1E234FBD7F00E13433 /* ThirdViewController.swift */; };
+		86E57AA02352216800C429B1 /* ProductTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57A9F2352216800C429B1 /* ProductTableManager.swift */; };
+		86E57AA2235221A600C429B1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57AA1235221A600C429B1 /* Product.swift */; };
+		86E57AA4235221F400C429B1 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57AA3235221F400C429B1 /* ProductViewModel.swift */; };
+		86E57AA6235222B800C429B1 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57AA5235222B800C429B1 /* ProductCell.swift */; };
+		86E57AA9235224F700C429B1 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57AA8235224F700C429B1 /* ProductService.swift */; };
+		86E57AAB235228A600C429B1 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E57AAA235228A600C429B1 /* ProductDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		86D3FAFA234FB96A00E13433 /* SecondaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
 		86D3FAFC234FB9DF00E13433 /* SecondaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCoordinator.swift; sourceTree = "<group>"; };
 		86D3FB1E234FBD7F00E13433 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		86E57A9F2352216800C429B1 /* ProductTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableManager.swift; sourceTree = "<group>"; };
+		86E57AA1235221A600C429B1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		86E57AA3235221F400C429B1 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		86E57AA5235222B800C429B1 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		86E57AA8235224F700C429B1 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		86E57AAA235228A600C429B1 /* ProductDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,11 @@
 		86D3FAD6234FB43300E13433 /* ProjectTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				86E57AA7235224E700C429B1 /* data */,
+				86E57A9E2352215100C429B1 /* util */,
+				86E57A9C2352213A00C429B1 /* views */,
+				86E57A9A2352210B00C429B1 /* viewModels */,
+				86E57A992352210000C429B1 /* models */,
 				86D3FAF3234FB62500E13433 /* viewControllers */,
 				86D3FAEC234FB47C00E13433 /* coordinators */,
 				86D3FAEB234FB45700E13433 /* extra */,
@@ -105,8 +122,57 @@
 				86D3FAF1234FB60300E13433 /* MainController.swift */,
 				86D3FAFA234FB96A00E13433 /* SecondaryViewController.swift */,
 				86D3FB1E234FBD7F00E13433 /* ThirdViewController.swift */,
+				86E57AAA235228A600C429B1 /* ProductDetailController.swift */,
 			);
 			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		86E57A992352210000C429B1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				86E57AA1235221A600C429B1 /* Product.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		86E57A9A2352210B00C429B1 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				86E57AA3235221F400C429B1 /* ProductViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		86E57A9C2352213A00C429B1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				86E57A9D2352213F00C429B1 /* tableCells */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		86E57A9D2352213F00C429B1 /* tableCells */ = {
+			isa = PBXGroup;
+			children = (
+				86E57AA5235222B800C429B1 /* ProductCell.swift */,
+			);
+			path = tableCells;
+			sourceTree = "<group>";
+		};
+		86E57A9E2352215100C429B1 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				86E57A9F2352216800C429B1 /* ProductTableManager.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		86E57AA7235224E700C429B1 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				86E57AA8235224F700C429B1 /* ProductService.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,13 +248,19 @@
 			files = (
 				86D3FAF2234FB60300E13433 /* MainController.swift in Sources */,
 				86D3FB1F234FBD7F00E13433 /* ThirdViewController.swift in Sources */,
+				86E57AA4235221F400C429B1 /* ProductViewModel.swift in Sources */,
 				86D3FAFD234FB9DF00E13433 /* SecondaryCoordinator.swift in Sources */,
+				86E57AA6235222B800C429B1 /* ProductCell.swift in Sources */,
+				86E57AA9235224F700C429B1 /* ProductService.swift in Sources */,
 				86D3FAEE234FB48900E13433 /* Coordinator.swift in Sources */,
 				86D3FAF9234FB89F00E13433 /* MainTabBarController.swift in Sources */,
+				86E57AA2235221A600C429B1 /* Product.swift in Sources */,
 				86D3FAD8234FB43300E13433 /* AppDelegate.swift in Sources */,
 				86D3FAF7234FB67700E13433 /* MainCoordinator.swift in Sources */,
 				86D3FAFB234FB96A00E13433 /* SecondaryViewController.swift in Sources */,
 				86D3FAF0234FB54900E13433 /* Storyboarded.swift in Sources */,
+				86E57AAB235228A600C429B1 /* ProductDetailController.swift in Sources */,
+				86E57AA02352216800C429B1 /* ProductTableManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
