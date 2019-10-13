@@ -26,6 +26,12 @@ extension Storyboarded where Self: UIViewController {
     }
 }
 
+/**
+ Creates a cell from the Storyboard by using a reference to the tableview. This can be called from the `cellForIndexPath` function in the TableManager.
+ Rather than using a String as identifier, use the class name of the cell as a reuse indentifier in Storyboard to create the cell from there.
+ 
+ For example: for the class `ProductCell` the cell's reuseidentfier should also be set to ProductCell
+ */
 protocol StoryboardedCell where Self: UITableViewCell{
     static func instantiate(_ tableView: UITableView, indexPath: IndexPath) -> Self
 }

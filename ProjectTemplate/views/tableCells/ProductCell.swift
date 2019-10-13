@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ An example implementation of a Cell. It holds a reference to a viewmodel to display it's data. 
+ */
 class ProductCell: UITableViewCell, StoryboardedCell {
     var productViewModel: ProductViewModel? {
         didSet {

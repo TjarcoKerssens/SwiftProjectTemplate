@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Very basic example model, while `Codable` is not used in this template, it should be used when translating from JSON or another serialized format. 
+ */
 struct Product: Codable {
     var id: Int
     var name: String

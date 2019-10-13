@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ This example coordinator controls the flow of the first tab in the `MainTabBarController`.
+ In this example, it will initialize the MainController, which shows a list of products and define a function to show the details of a product.
+ */
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     
@@ -24,9 +28,12 @@ class MainCoordinator: Coordinator {
         vc.tabBarItem.title = "First"
         navigationController.pushViewController(vc, animated: false)
     }
-    
+    /**
+     In this example, the function is called when the user tabs a product cell in the `MainController`, but it can be called from anywhere in the flow to show product details
+     */
     func showProduct(_ product: ProductViewModel){
         let productVc = ProductDetailController.instantiate()
+        productVc.coordinator = self
         productVc.product = product
         navigationController.pushViewController(productVc, animated: true)
     }

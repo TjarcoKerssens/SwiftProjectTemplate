@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ An example implementation of a class responsible for managing data and interactions with a `UITableView`
+ */
 class ProductTableManager: NSObject, UITableViewDataSource, UITableViewDelegate {
     var products = [ProductViewModel]()
     weak var coordinator: MainCoordinator?

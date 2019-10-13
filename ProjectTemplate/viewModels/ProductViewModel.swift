@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ A class responsible for translating between the `Product` model and the Views that display data to the user.
+ This class is key in the MVVM pattern. Another way of delegating is to don't use a StoryBoard to style the Vvew and have this class interect with
+ a custom View class, which will be shown in another branch of this template's git respository.
+ */
 class ProductViewModel {
     var product: Product
     
@@ -35,15 +40,16 @@ class ProductViewModel {
         }
     }
     
-    static var priceFormatter: NumberFormatter {
-        get {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            formatter.usesGroupingSeparator = true
-            formatter.locale = Locale.current
-            return formatter
-        }
-    }
+    /**
+     A shared formatatter for the price of the Product. Will only be initialized once when needed and reused after that. (try it out with breakpoints!)
+     */
+    static var priceFormatter: NumberFormatter  = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.usesGroupingSeparator = true
+        formatter.locale = Locale.current
+        return formatter
+    }()
     
 
     

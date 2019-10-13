@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ An example of an alternative coordinator for a different tab in the `MainTabBarController`.
+ */
 class SecondaryCoordinator: Coordinator {
     var childCoordinators =  [Coordinator]()
     
@@ -27,6 +30,7 @@ class SecondaryCoordinator: Coordinator {
     
     func goToThird(){
         let vc = ThirdViewController.instantiate()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
 }

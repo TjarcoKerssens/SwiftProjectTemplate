@@ -8,7 +8,15 @@
 
 import Foundation
 
+/**
+ An empty example of a service which should be responsible for retrieving the model data from somewhere. This template does not make assumptions about your data source.
+ */
 class ProductService {
+    
+    /*
+     Use the singleton pattern to share this service between instances. Might be efficient when the service has expensive
+     setup logic with for example API interaction or CoreData.
+     */
     static let shared = ProductService()
     
     /**
